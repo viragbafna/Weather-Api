@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Using a nice weather/sky image from Unsplash */
+    background: url("../Images/weather.jpeg") no-repeat center center/cover;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #333;
+    position: relative;
+    z-index: 1;
+}
+
+/* This overlay darkens the background image so text stays readable */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.main-section {
+    padding-top: 20px;
+}
+
+.app-title {
+    font-weight: 700;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+}
+
+.search-input {
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border-radius: 50px 0 0 50px !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.search-input:focus {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-color: transparent;
+}
+
+.search-btn {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: 600;
+    padding: 0 30px;
+    border-radius: 0 50px 50px 0 !important;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #34495e;
+    color: white;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.city-title {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.current-temp {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #333;
+    margin-right: 15px;
+}
+
+.weather-desc {
+    color: #7f8c8d;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.stat-item {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #eee;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    background-color: #fff;
+}
+
+.stat-item h6:first-child {
+    color: #95a5a6;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-item h6:last-child {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.error-msg {
+    color: #e74c3c;
+    font-weight: 600;
+}
