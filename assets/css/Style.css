@@ -5,7 +5,7 @@
 }
 
 body {
-    /* Using a nice weather/sky image from Unsplash */
+    
     background: url("../Images/weather.jpeg") no-repeat center center/cover;
     min-height: 100vh;
     font-family: system-ui, -apple-system, sans-serif;
@@ -14,7 +14,7 @@ body {
     z-index: 1;
 }
 
-/* This overlay darkens the background image so text stays readable */
+
 body::after {
     content: "";
     position: fixed;
@@ -125,4 +125,5 @@ body::after {
 .error-msg {
     color: #e74c3c;
     font-weight: 600;
+
 }
